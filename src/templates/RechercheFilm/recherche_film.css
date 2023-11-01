@@ -1,0 +1,383 @@
+
+.Recherchedefilm{
+
+	position: absolute;
+	width: 1135px;
+	height: 962px;
+
+
+
+}
+.MAIN{
+
+	position: absolute;
+	width: 1135px;
+	height: 962px;
+
+	background: #FFF8F8;
+
+
+}
+.best_film_list{
+
+	position: absolute;
+	width: 1092px;
+	height: 363px;
+
+
+
+}
+.FILM_LIST{
+
+	position: absolute;
+	width: 1092px;
+	height: 363px;
+
+	background: #D65A14;
+	border-radius: 30px;
+
+
+}
+.FILM_ITEM6{
+
+	position: absolute;
+	width: 227px;
+	height: 240px;
+
+	background: #030E12;
+
+
+}
+.FILM_ITEM7{
+
+	position: absolute;
+	width: 227px;
+	height: 240px;
+
+	background: #030E12;
+
+
+}
+.FILM_ITEM8{
+
+	position: absolute;
+	width: 227px;
+	height: 240px;
+
+	background: #030E12;
+
+
+}
+.FILM_ITEMnext{
+
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 167.01px;
+	height: 0px;
+
+	border: 24px solid #000000;
+	transform: rotate(0.69deg);
+
+
+}
+.Filtres{
+
+	position: absolute;
+	width: 954px;
+	height: 149px;
+
+
+
+}
+.FILTRES3{
+
+	position: absolute;
+	width: 954px;
+	height: 149px;
+
+	background: #D9D9D9;
+	border-radius: 25px;
+
+
+}
+.FILTRES10{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+	background: #F4841D;
+	border-radius: 10px;
+
+
+}
+.FILTRES15{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+	background: #F4841D;
+	border-radius: 10px;
+
+
+}
+.FILTRES13{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+	background: #F4841D;
+	border-radius: 10px;
+
+
+}
+.FILTRES11{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+	background: #F4841D;
+	border-radius: 10px;
+
+
+}
+.FILTRES12{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+	background: #F4841D;
+	border-radius: 10px;
+
+
+}
+.FILTRES14{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+	background: #F4841D;
+	border-radius: 10px;
+
+
+}
+.TRI16{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+	background: #FFFFFF;
+	border-radius: 10px;
+
+
+}
+.Tri{
+
+	position: absolute;
+	width: 162.36px;
+	height: 14.25px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+
+	color: #000000;
+
+
+
+}
+.chatBox_button{
+
+	position: absolute;
+	width: 338px;
+	height: 109px;
+
+
+
+}
+.chatBox_bg{
+
+	position: absolute;
+	width: 338px;
+	height: 109px;
+
+	background: #FDFF95;
+	border-radius: 50px;
+
+
+}
+.Chatbox{
+
+	position: absolute;
+	width: 185px;
+	height: 49px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 48px;
+}
+.identicaltoboxheight{
+
+	color: #000000;
+
+
+
+}
+.chatBox_messages_icon{
+
+	position: absolute;
+	width: 79px;
+	height: 79px;
+
+	background: url(image.png);
+
+
+}
+.menu_principale{
+
+	position: absolute;
+	width: 991px;
+	height: 70px;
+
+
+
+}
+.menu_list{
+
+	position: absolute;
+	width: 726.95px;
+	height: 46px;
+
+
+
+}
+.acceuil_item{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+
+
+}
+.acceuil_rec{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+	background: #F4841D;
+	border-radius: 10px;
+
+
+}
+.Acceuil{
+
+	position: absolute;
+	width: 177px;
+	height: 46px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+
+	color: #000000;
+
+
+
+}
+.cat2_item{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+
+
+}
+.cat2_rec{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+	background: #F4841D;
+	border-radius: 10px;
+
+
+}
+.Cat2{
+
+	position: absolute;
+	width: 177px;
+	height: 46px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+
+	color: #000000;
+
+
+
+}
+.Films_item{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+
+
+}
+.films_rec{
+
+	position: absolute;
+	width: 196.95px;
+	height: 46px;
+
+	background: #F4841D;
+	border-radius: 10px;
+
+
+}
+.Films{
+
+	position: absolute;
+	width: 177px;
+	height: 46px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+
+	color: #000000;
+
+
+
+}
+.login{
+
+	position: absolute;
+	width: 67px;
+	height: 70px;
+
+	background: url(image.png);
+}
