@@ -1,14 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Caroussel from "./Atoms/Caroussel";
+import RechercheFilm from './templates/RechercheFilm/RechercheFilm';
 import {Route, Routes} from 'react-router-dom';
-
 function App() {
-    return (
-        <Routes>
-            <Route path="/" element={<Caroussel />} />
+  return (
+    <Routes>
+            <Route path="/" element={<RechercheFilm />} />
         </Routes>
-    );
+ );
 }
 
 export default App;
