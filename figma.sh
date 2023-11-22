@@ -1,1 +1,1 @@
-$ cat RechercheFilm.css | sed -E 's/^([^/])/\t\1/' | sed -E 's/\/\*(.*)\*\//\}\n\.\1 \{/' | sed '/^\./s/\ //g' > recherche_film.css
+$ cat conversationBody.css | sed -E 's/^([^/])/\t\1/' | sed -E 's/\/\*(.*)\*\//\}\n\.\1 \{/' | sed '/^\./s/\ //g' > chatBox2.css

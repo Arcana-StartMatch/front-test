@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Caroussel from "./Atoms/Caroussel";
+import RechercheFilm from './templates/RechercheFilm/RechercheFilm';
 function App() {
   return (
-    <Caroussel></Caroussel>
+    
+    <RechercheFilm></RechercheFilm>
  );
 }
 

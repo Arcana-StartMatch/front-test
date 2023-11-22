@@ -1,0 +1,35 @@
+.chatBox_button {
+
+  position: fixed;
+  width: 338px;
+  height: 109px;
+  bottom: 50px;
+  right: 80px;
+}
+
+.chatBox_bg {
+
+  background: #FDFF95;
+  border-radius: 50px;
+
+}
+
+.Chatbox {
+  position: relative;
+  left: 55px;
+  top : -10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+
+.chatBox_messages_icon {
+
+  position: relative;
+  width: 79px;
+  height: 79px;
+  top : 20px;
+  left: 15px;
+}
