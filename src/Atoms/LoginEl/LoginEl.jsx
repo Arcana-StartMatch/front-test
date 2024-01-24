@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import avatar from "../../img/avatar.png";
+import React from "react";
+import avatar from "../../img/home_icon.png";
 
 export default function LoginEl() {
   return (
-    <img src={avatar} width="8%" onClick={alert("pas encore implementé !")} />
+    <a href="/">
+      <img src={avatar} alt="test" width="60px" />
+    </a>
   );
 }

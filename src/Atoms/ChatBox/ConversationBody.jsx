@@ -1,5 +1,5 @@
 import envoi_msg_icon from "../../img/send_icon.png";
-import messages_icon from "../../img/chatbox_icon.png";
+import messages_icon from "../../img/robot_icon.png";
 import * as React from "react";
 import "./conversationBody.css";
 export default function ConversationBody() {
@@ -53,21 +53,31 @@ export default function ConversationBody() {
     // // Scroll to the newly added message
     // const newMessageElement = document.getElementById("dernier_message");
     // newMessageElement.scrollIntoView(true);
-    dernierMessage.current.scrollIntoView();
+
     newMessage.current.value = "";
   };
   React.useEffect(() => {
-    dernierMessage.current.scrollIntoView();
-  }, []);
+    dernierMessage.current.scrollTop = dernierMessage.current.scrollTopMax;
+  }, [messages]);
 
   return (
     <>
-      <img src={messages_icon} className="messages_icon" />
+      <div className="messages_icon">
+        <>
+          <img src={messages_icon} />
+          <h1>Chat bot</h1>
+        </>
+      </div>
 
-      <div className="chatBot_messages">
+      <div className="chatBot_messages" ref={dernierMessage}>
         {messages.map((message) => (
-          <>
-            <div
+          <div
+            style={{
+              width: "100%",
+              textAlign: message.type ? "right" : "left",
+            }}
+          >
+            <span
               key={"div" + message.timestamp}
               className={
                 message.type
@@ -75,25 +85,21 @@ export default function ConversationBody() {
                   : "chatBot_message"
               }
             >
-              <span className="vertical_center">{message.message}</span>
-            </div>
-            {message.type ? (
-              <div className="chatBot_message chatBot_message_vide">
-                {" "}
-                <span className="vertical_center">&nbsp;</span>
+              <div
+                style={{
+                  textAlign: "justify",
+                  padding: "7px",
+                }}
+              >
+                {message.message}
               </div>
-            ) : (
-              ""
-            )}
-          </>
+            </span>
+          </div>
         ))}
-        <div id="dernier_message" ref={dernierMessage}>
-          &nbsp;
-        </div>
       </div>
 
       <div className="footer_chatBot">
-        <input type="texte" className="saisie_chatBot" ref={newMessage} />
+        <input type="text" className="saisie_chatBot" ref={newMessage} />
         <img
           src={envoi_msg_icon}
           className="envoi_message"

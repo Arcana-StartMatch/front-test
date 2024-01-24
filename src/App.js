@@ -7,6 +7,7 @@ function App() {
   return (
     <Routes>
             <Route path="/" element={<Formulaire />} />
+            <Route path="/recherche" element={<RechercheFilm />} />
         </Routes>
  );
 }

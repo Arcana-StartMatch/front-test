@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import messages_img from "../../img/256_messageicon.png";
+import messages_img from "../../img/robot_icon.png";
 import "./chatBox.css";
 import Modal from "../../Atoms/Modal/Modal";
 import ConversationBody from "./ConversationBody";
