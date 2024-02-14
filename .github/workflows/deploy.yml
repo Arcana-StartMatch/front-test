@@ -11,10 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Node.js
-        run: |
-          nvm install 16
-
       - name: Install dependencies
         run: npm install
 
