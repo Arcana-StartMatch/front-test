@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import RechercheFilm from './templates/RechercheFilm/RechercheFilm';
 import {Route, Routes} from 'react-router-dom';

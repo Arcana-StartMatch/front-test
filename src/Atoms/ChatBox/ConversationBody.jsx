@@ -1,5 +1,5 @@
-import envoi_msg_icon from "../../img/send_icon.png";
-import messages_icon from "../../img/robot_icon.png";
+import envoi_msg_icon from "../../img/envoyer_msg.svg";
+import messages_icon from "../../img/chatbox_icon.svg";
 import * as React from "react";
 import "./conversationBody.css";
 export default function ConversationBody() {

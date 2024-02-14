@@ -25,11 +25,16 @@ export default function Form() {
   ];
   return (
     <div className="forms">
-      <h1>Formulaire</h1>
       <table className="forms_els">
         <tbody>
+          <tr>
+            <th className=" th">
+              <h1>Formulaire</h1>
+            </th>
+            <td className="td"></td>
+          </tr>
           <tr className="form_div">
-            <th className="form_div th">
+            <th className=" th">
               <label htmlFor="input1">Donnée 1 :</label>
             </th>
             <td className="td">
@@ -37,7 +42,7 @@ export default function Form() {
             </td>
           </tr>
           <tr className="form_div">
-            <th className="form_div th">
+            <th className="th">
               <label htmlFor="input2">Donnée 2 :</label>
             </th>
             <td className="td">
@@ -45,7 +50,7 @@ export default function Form() {
             </td>
           </tr>
           <tr className="form_div">
-            <th className="form_div th">
+            <th className="th">
               <label htmlFor="input3">Donnée 3 :</label>
             </th>
             <td className="td">
@@ -53,7 +58,7 @@ export default function Form() {
             </td>
           </tr>
           <tr className="form_div">
-            <th className="form_div th">
+            <th className="th">
               <label htmlFor="input4">Donnée 4 :</label>
             </th>
             <td className="td">
@@ -62,7 +67,7 @@ export default function Form() {
           </tr>
         </tbody>
       </table>
-      <div className="btn_div">
+      <div className="th">
         <button id="valider_btn">Valider</button>
       </div>
     </div>

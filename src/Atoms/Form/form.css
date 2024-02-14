@@ -1,11 +1,25 @@
 .forms {
-  margin : auto;
+  margin-left: 15%;
   width: max-content;
   padding : 30px;
   height: max-content;
+ 
   
-  background: #D9D9D9;
   border-radius: 25px;
+}
+.forms h1 {
+  background-color: #F4841D;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border-color: #F4841D;
+  width:max-content;
+}
+.forms label,
+.forms input{
+  background-color: #F4841D;
+  padding: 6px;
+  border-radius: 3px;
+  border-color: #F4841D;
 }
 .forms_els{
   width:max-content;
@@ -38,4 +52,7 @@ padding: 10px;
 .btn_div{
   margin: auto;
   width : min-content;  
+}
+.form_div th{
+  border-left: 2px solid #F4841D;
 }
