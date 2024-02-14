@@ -21,15 +21,11 @@ jobs:
         run: npm run build
 
       - name: Deploy to server REMOTE_HOST ${{ secrets.SSH_HOST }} REMOTE_USER ${{ secrets.SSH_USERNAME }} SSH_PRIVATE_KEY ${{ secrets.SSH_KEY }}
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_KEY }}
-          port: 22
-          script: cd ${{ env.TARGET_DIR }}
-            rm -rf *
-            scp -r ${{ env.PROJECT_ROOT_DIR }}/build/* ${{ env.TARGET_DIR }}
+        run:
+          ssh -i "StarMatch.pem" ec2-user@ec2-13-37-220-62.eu-west-3.compute.amazonaws.com
+          cd ${{ env.TARGET_DIR }}
+          rm -rf *
+          scp -r ${{ env.PROJECT_ROOT_DIR }}/build/* ${{ env.TARGET_DIR }}
       - name: sleep
         run: sleep 30000 & 1
 env:
