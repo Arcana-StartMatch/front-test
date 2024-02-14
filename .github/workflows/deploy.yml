@@ -21,11 +21,40 @@ jobs:
         run: npm run build
 
       - name: Deploy to server REMOTE_HOST ${{ secrets.SSH_HOST }} REMOTE_USER ${{ secrets.SSH_USERNAME }} SSH_PRIVATE_KEY ${{ secrets.SSH_KEY }}
-        run:
-          ssh -i "StarMatch.pem" ec2-user@ec2-13-37-220-62.eu-west-3.compute.amazonaws.com
-          cd ${{ env.TARGET_DIR }}
-          rm -rf *
-          scp -r ${{ env.PROJECT_ROOT_DIR }}/build/* ${{ env.TARGET_DIR }}
+        run: |
+          # Install `paramiko` library for SCP functionality
+          pip install paramiko
+
+          # Import libraries
+          import paramiko
+
+          # Securely obtain credentials from secrets
+          host = ${{ secrets.SSH_HOST }}
+          username = ${{ secrets.SSH_USERNAME }}
+          key_path = ${{ secrets.SSH_KEY }}
+
+          # Read private key content
+          with open(key_path, 'r') as f:
+              key = paramiko.RSAKey.from_private_key_pem(f.read())
+
+          # Connect to server using SSH
+          ssh = paramiko.SSHClient()
+          ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+          ssh.connect(hostname=host, username=username, pkey=key)
+
+          # Create SFTP client
+          sftp = ssh.open_sftp()
+
+          # Define source and destination paths
+          source_dir = '{{ env.PROJECT_ROOT_DIR }}/build'
+          dest_dir = '{{ env.TARGET_DIR }}'
+
+          # Upload files recursively
+          sftp.put_r(source_dir, dest_dir)
+
+          # Close connections
+          sftp.close()
+          ssh.close()
       - name: sleep
         run: sleep 30000 & 1
 env:
