@@ -22,16 +22,13 @@ jobs:
         run: npm run build
 
       - name: Deploy to server
-        uses: nanz/ssh-action@v3
+        uses: easingthemes/ssh-deploy@v2.1.4
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            cd /var/www/html
-            rm -rf *
-            mv ../build/* ./
-            # Additional deployment steps like restarting server can be added here
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          SOURCE: "build"
+          TARGET: "/var/www/html"
 
 env:
   # Replace with your actual secrets
