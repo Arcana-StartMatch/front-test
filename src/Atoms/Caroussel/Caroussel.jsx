@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import arrow_img from "../../img/arrow.png";
 import "./caroussel.css";
 

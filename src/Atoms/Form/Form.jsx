@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./form.css";
 
 export default function Form() {
-  const [form_1, setValue] = useState("");
-  const [tri_value, setValue2] = useState(1);
+  // const [form_1, setValue] = useState("");
+  // const [tri_value, setValue2] = useState(1);
 
-  const changeValue1 = function (e) {
-    setValue(e.target.value);
-  };
-  const appliqueTri = function (e) {
-    alert("option choisit : " + e.target.value);
+  // const changeValue1 = function (e) {
+  //   setValue(e.target.value);
+  // };
+  // const appliqueTri = function (e) {
+  //   alert("option choisit : " + e.target.value);
 
-    setValue2(e.target.value);
-  };
-  const items = [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-    { id: 5 },
-    { id: 6 },
-    { id: 7 },
-    { id: 8 },
-  ];
+  //   setValue2(e.target.value);
+  // };
+  // const items = [
+  //   { id: 1 },
+  //   { id: 2 },
+  //   { id: 3 },
+  //   { id: 4 },
+  //   { id: 5 },
+  //   { id: 6 },
+  //   { id: 7 },
+  //   { id: 8 },
+  // ];
   return (
     <div className="forms">
       <table className="forms_els">

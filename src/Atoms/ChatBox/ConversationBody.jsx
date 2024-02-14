@@ -64,7 +64,7 @@ export default function ConversationBody() {
     <>
       <div className="messages_icon">
         <>
-          <img src={messages_icon} />
+          <img src={messages_icon} alt="icone des messages" />
           <h1>Chat bot</h1>
         </>
       </div>
@@ -104,6 +104,7 @@ export default function ConversationBody() {
           src={envoi_msg_icon}
           className="envoi_message"
           onClick={sendNewMsg}
+          alt="Envoyer un message au chatbot"
         />
       </div>
     </>
