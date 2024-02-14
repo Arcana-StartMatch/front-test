@@ -20,7 +20,7 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: Deploy to server
+      - name: Deploy to server REMOTE_HOST ${{ secrets.SSH_HOST }} REMOTE_USER ${{ secrets.SSH_USERNAME }} SSH_PRIVATE_KEY ${{ secrets.SSH_KEY }}
         uses: easingthemes/ssh-deploy@v2.1.4
         with:
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
