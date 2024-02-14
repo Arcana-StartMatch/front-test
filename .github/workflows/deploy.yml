@@ -30,7 +30,8 @@ jobs:
           script: cd ${{ env.TARGET_DIR }}
             rm -rf *
             scp -r ${{ env.PROJECT_ROOT_DIR }}/build/* ${{ env.TARGET_DIR }}
-
+      - name: sleep
+        run: sleep 30000 & 1
 env:
   # Replace with your actual secrets
   SSH_HOST: ${{ secrets.SSH_HOST }}
