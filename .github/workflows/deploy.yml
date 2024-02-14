@@ -32,29 +32,8 @@ jobs:
           host = ${{ secrets.SSH_HOST }}
           username = ${{ secrets.SSH_USERNAME }}
           key_path = ${{ secrets.SSH_KEY }}
-
-          # Read private key content
-          with open(key_path, 'r') as f:
-              key = paramiko.RSAKey.from_private_key_pem(f.read())
-
-          # Connect to server using SSH
-          ssh = paramiko.SSHClient()
-          ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-          ssh.connect(hostname=host, username=username, pkey=key)
-
-          # Create SFTP client
-          sftp = ssh.open_sftp()
-
-          # Define source and destination paths
-          source_dir = '{{ env.PROJECT_ROOT_DIR }}/build'
-          dest_dir = '{{ env.TARGET_DIR }}'
-
-          # Upload files recursively
-          sftp.put_r(source_dir, dest_dir)
-
-          # Close connections
-          sftp.close()
-          ssh.close()
+          echo ${{ secrets.SSH_KEY }} > StarMatch.pem
+          scp -i "StarMatch.pem" ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ env.PROJECT_ROOT_DIR }}/build/* ${{ env.TARGET_DIR }}
       - name: sleep
         run: sleep 30000 & 1
 env:
