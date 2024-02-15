@@ -22,8 +22,9 @@ jobs:
 
       - name: Deploy to server REMOTE_HOST ${{ secrets.SSH_HOST }} REMOTE_USER ${{ secrets.SSH_USERNAME }} SSH_PRIVATE_KEY ${{ secrets.SSH_KEY }}
         run: |
-          sudo echo "${{ secrets.SSH_KEY }}" > StarMatch.pem
-          sudo scp -i "StarMatch.pem" -r ${{ env.PROJECT_ROOT_DIR }}/build/* ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ env.TARGET_DIR }}
+          echo "${{ secrets.SSH_KEY }}" > StarMatch.pem
+          ssh -i "StarMatch.pem" ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} rm -rf ${{ env.TARGET_DIR }}/*
+          scp -i "StarMatch.pem" -r ${{ env.PROJECT_ROOT_DIR }}/build/* ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ env.TARGET_DIR }}
       - name: sleep
         run: sleep 120
 env:
