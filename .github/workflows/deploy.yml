@@ -28,6 +28,8 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
           SOURCE: "build/"
           TARGET: "/var/www/html"
+          SCRIPT_BEFORE: |
+            rm -rf /var/www/html/*
 
 env:
   # Replace with your actual secrets
