@@ -1,4 +1,4 @@
-import envoi_msg_icon from "../../img/envoyer_msg.svg";
+import envoi_msg_icon from "../../img/chatbox_icon.svg";
 import messages_icon from "../../img/chatbox_icon.svg";
 import * as React from "react";
 import "./conversationBody.css";
