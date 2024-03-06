@@ -6,8 +6,8 @@ import Formulaire from './templates/Formulaire/Formulaire';
 function App() {
   return (
     <Routes>
-            <Route path="/" element={<Formulaire />} />
-            <Route path="/recherche" element={<RechercheFilm />} />
+            <Route path="/test" element={<Formulaire />} />
+            <Route path="/" element={<RechercheFilm />} />
         </Routes>
  );
 }
